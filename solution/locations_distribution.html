@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9ac86f5130934e46a75271b129ab5f72 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_9ac86f5130934e46a75271b129ab5f72" ></div>
+        
+</body>
+<script>    
+    
+            var map_9ac86f5130934e46a75271b129ab5f72 = L.map(
+                "map_9ac86f5130934e46a75271b129ab5f72",
+                {
+                    center: [45.372, -121.6972],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ab56376a908b4e698b49cb3a4074bcc7 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var marker_198da14124e04016b2f6ccdcb308d9a2 = L.marker(
+                [45.6409849, -109.3757719],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_ff40378b83484426ac03296f6c1fc3d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_198da14124e04016b2f6ccdcb308d9a2.setIcon(icon_ff40378b83484426ac03296f6c1fc3d3);
+        
+    
+        var popup_3e1d9a49e26f429b80cba0121518a691 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_183d4c9dcd4b40f5917d9c7cef4b8522 = $(`<div id="html_183d4c9dcd4b40f5917d9c7cef4b8522" style="width: 100.0%; height: 100.0%;">城市Columbus,所在州MT,邮编59019,周销量779.84</div>`)[0];
+            popup_3e1d9a49e26f429b80cba0121518a691.setContent(html_183d4c9dcd4b40f5917d9c7cef4b8522);
+        
+
+        marker_198da14124e04016b2f6ccdcb308d9a2.bindPopup(popup_3e1d9a49e26f429b80cba0121518a691)
+        ;
+
+        
+    
+    
+            var marker_a6113c868dfd4c2aafd9d004aefd476b = L.marker(
+                [46.4584709, -112.1499176],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_4277861ce6164078978e1f56a31a67ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a6113c868dfd4c2aafd9d004aefd476b.setIcon(icon_4277861ce6164078978e1f56a31a67ce);
+        
+    
+        var popup_5660cd8661e24cce8d9eca7d0d90bcfe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af92d728f7dc4d37814eaf0cdbbac11f = $(`<div id="html_af92d728f7dc4d37814eaf0cdbbac11f" style="width: 100.0%; height: 100.0%;">城市Clancy,所在州MT,邮编59634,周销量730.33</div>`)[0];
+            popup_5660cd8661e24cce8d9eca7d0d90bcfe.setContent(html_af92d728f7dc4d37814eaf0cdbbac11f);
+        
+
+        marker_a6113c868dfd4c2aafd9d004aefd476b.bindPopup(popup_5660cd8661e24cce8d9eca7d0d90bcfe)
+        ;
+
+        
+    
+    
+            var marker_c155bed0e8d846f2902bb069f0b4d21b = L.marker(
+                [46.9974173, -114.2154901],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_4650616a2b5b4e90a1c84243bbb67a0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c155bed0e8d846f2902bb069f0b4d21b.setIcon(icon_4650616a2b5b4e90a1c84243bbb67a0d);
+        
+    
+        var popup_e47430f5f8084e0483de8f20d0671f1f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0ed82cfd05241208777e2f0e6db2969 = $(`<div id="html_b0ed82cfd05241208777e2f0e6db2969" style="width: 100.0%; height: 100.0%;">城市Missoula,所在州MT,邮编59808,周销量568.34</div>`)[0];
+            popup_e47430f5f8084e0483de8f20d0671f1f.setContent(html_b0ed82cfd05241208777e2f0e6db2969);
+        
+
+        marker_c155bed0e8d846f2902bb069f0b4d21b.bindPopup(popup_e47430f5f8084e0483de8f20d0671f1f)
+        ;
+
+        
+    
+    
+            var marker_b254daba821f4b56b56068077ff9eebb = L.marker(
+                [37.347827, -109.0254933],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_dffd5b0d96ff4e06b6f090eec197bb90 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b254daba821f4b56b56068077ff9eebb.setIcon(icon_dffd5b0d96ff4e06b6f090eec197bb90);
+        
+    
+        var popup_c49119541de743a4b2d0ae2a8f0ffb3d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ad1e022a9ce4949b434ac64fd9d533e = $(`<div id="html_6ad1e022a9ce4949b434ac64fd9d533e" style="width: 100.0%; height: 100.0%;">城市Cortez,所在州CO,邮编81321,周销量759.0</div>`)[0];
+            popup_c49119541de743a4b2d0ae2a8f0ffb3d.setContent(html_6ad1e022a9ce4949b434ac64fd9d533e);
+        
+
+        marker_b254daba821f4b56b56068077ff9eebb.bindPopup(popup_c49119541de743a4b2d0ae2a8f0ffb3d)
+        ;
+
+        
+    
+    
+            var marker_f93195100e294e4cb8ff9b5f6c6d0c65 = L.marker(
+                [38.7020966, -108.4154333],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_cb1582cf1a3c4608822731a34ada7520 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f93195100e294e4cb8ff9b5f6c6d0c65.setIcon(icon_cb1582cf1a3c4608822731a34ada7520);
+        
+    
+        var popup_b6707636499d420eb873b9ff2a037a02 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1538b43c977246d393fc93d2bd7ef053 = $(`<div id="html_1538b43c977246d393fc93d2bd7ef053" style="width: 100.0%; height: 100.0%;">城市Delta,所在州CO,邮编81416,周销量976.23</div>`)[0];
+            popup_b6707636499d420eb873b9ff2a037a02.setContent(html_1538b43c977246d393fc93d2bd7ef053);
+        
+
+        marker_f93195100e294e4cb8ff9b5f6c6d0c65.bindPopup(popup_b6707636499d420eb873b9ff2a037a02)
+        ;
+
+        
+    
+    
+            var marker_4d048f9a8f17436f9caf8c31b66b2ef1 = L.marker(
+                [39.1197328, -108.5708444],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_6a3925c849aa40d9b75a15d0d25aaea4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4d048f9a8f17436f9caf8c31b66b2ef1.setIcon(icon_6a3925c849aa40d9b75a15d0d25aaea4);
+        
+    
+        var popup_7d60f49790ce42f0af05f8d92dded39d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3fbd2a74388e4cd98de3b7db48f8e008 = $(`<div id="html_3fbd2a74388e4cd98de3b7db48f8e008" style="width: 100.0%; height: 100.0%;">城市Grand Junction,所在州CO,邮编81504,周销量860.1899999999999</div>`)[0];
+            popup_7d60f49790ce42f0af05f8d92dded39d.setContent(html_3fbd2a74388e4cd98de3b7db48f8e008);
+        
+
+        marker_4d048f9a8f17436f9caf8c31b66b2ef1.bindPopup(popup_7d60f49790ce42f0af05f8d92dded39d)
+        ;
+
+        
+    
+    
+            var marker_0fbf17add56a438d8c9436a18a799f8c = L.marker(
+                [39.7238198, -108.4036783],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_da1db421ab7342c38d89500fc4a13c17 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0fbf17add56a438d8c9436a18a799f8c.setIcon(icon_da1db421ab7342c38d89500fc4a13c17);
+        
+    
+        var popup_7eb0a03e43a340d2b6133c6c599724aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52d53eadfddb4dcb87f61f3c3a8d5179 = $(`<div id="html_52d53eadfddb4dcb87f61f3c3a8d5179" style="width: 100.0%; height: 100.0%;">城市Rifle,所在州CO,邮编81650,周销量585.81</div>`)[0];
+            popup_7eb0a03e43a340d2b6133c6c599724aa.setContent(html_52d53eadfddb4dcb87f61f3c3a8d5179);
+        
+
+        marker_0fbf17add56a438d8c9436a18a799f8c.bindPopup(popup_7eb0a03e43a340d2b6133c6c599724aa)
+        ;
+
+        
+    
+    
+            var marker_36e94715a25843258779bde4d43ccbb7 = L.marker(
+                [43.4845956, -111.0542568],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_11ba1c2000a64e81b94ce77ad6511f09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_36e94715a25843258779bde4d43ccbb7.setIcon(icon_11ba1c2000a64e81b94ce77ad6511f09);
+        
+    
+        var popup_553e9eb2223441a480d2ded7f3a9817a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_12e340235a4e4a63b4f46d0fc6de2821 = $(`<div id="html_12e340235a4e4a63b4f46d0fc6de2821" style="width: 100.0%; height: 100.0%;">城市Wilson,所在州WY,邮编83014,周销量412.08</div>`)[0];
+            popup_553e9eb2223441a480d2ded7f3a9817a.setContent(html_12e340235a4e4a63b4f46d0fc6de2821);
+        
+
+        marker_36e94715a25843258779bde4d43ccbb7.bindPopup(popup_553e9eb2223441a480d2ded7f3a9817a)
+        ;
+
+        
+    
+    
+            var marker_1fd258fad04f4bb2a6a56b73550e9d69 = L.marker(
+                [42.7488243, -114.5051788],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_fd95361cd00e490eb581acdd28dba1f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1fd258fad04f4bb2a6a56b73550e9d69.setIcon(icon_fd95361cd00e490eb581acdd28dba1f1);
+        
+    
+        var popup_ff76093d7a7145e8aec919635ef7fb5c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7aa42bcb813d4d16a6e90e8caa7d027f = $(`<div id="html_7aa42bcb813d4d16a6e90e8caa7d027f" style="width: 100.0%; height: 100.0%;">城市Jerome,所在州ID,邮编83338,周销量546.13</div>`)[0];
+            popup_ff76093d7a7145e8aec919635ef7fb5c.setContent(html_7aa42bcb813d4d16a6e90e8caa7d027f);
+        
+
+        marker_1fd258fad04f4bb2a6a56b73550e9d69.bindPopup(popup_ff76093d7a7145e8aec919635ef7fb5c)
+        ;
+
+        
+    
+    
+            var marker_9b5a1917ddf7471588ea9ef4200132aa = L.marker(
+                [46.5231654, -116.4105886],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_5901fa013c11495b98c2edc2d3d40c80 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9b5a1917ddf7471588ea9ef4200132aa.setIcon(icon_5901fa013c11495b98c2edc2d3d40c80);
+        
+    
+        var popup_861e8aeb8f214b0fa1e80af0d628dd76 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e8c9185a5084882ad0e39cd3f6021c2 = $(`<div id="html_3e8c9185a5084882ad0e39cd3f6021c2" style="width: 100.0%; height: 100.0%;">城市Orofino,所在州ID,邮编83544,周销量599.47</div>`)[0];
+            popup_861e8aeb8f214b0fa1e80af0d628dd76.setContent(html_3e8c9185a5084882ad0e39cd3f6021c2);
+        
+
+        marker_9b5a1917ddf7471588ea9ef4200132aa.bindPopup(popup_861e8aeb8f214b0fa1e80af0d628dd76)
+        ;
+
+        
+    
+    
+            var marker_143bfee2cc3f4523a46264b3b91e3d97 = L.marker(
+                [45.0898091, -116.2161753],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_94ce452849f0469bbb808a2394f425a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_143bfee2cc3f4523a46264b3b91e3d97.setIcon(icon_94ce452849f0469bbb808a2394f425a5);
+        
+    
+        var popup_93f693c685eb45b0ab9d70b6eb1d48ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c867423a6b54c41a784de611dd649fd = $(`<div id="html_7c867423a6b54c41a784de611dd649fd" style="width: 100.0%; height: 100.0%;">城市McCall,所在州ID,邮编83638,周销量853.41</div>`)[0];
+            popup_93f693c685eb45b0ab9d70b6eb1d48ac.setContent(html_7c867423a6b54c41a784de611dd649fd);
+        
+
+        marker_143bfee2cc3f4523a46264b3b91e3d97.bindPopup(popup_93f693c685eb45b0ab9d70b6eb1d48ac)
+        ;
+
+        
+    
+    
+            var marker_20b6edc4fbe8469e89a6f0f97e538454 = L.marker(
+                [43.5952448, -116.2302073],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_a85129b20f734302ad92b11070827146 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_20b6edc4fbe8469e89a6f0f97e538454.setIcon(icon_a85129b20f734302ad92b11070827146);
+        
+    
+        var popup_a5912e6c86ae4759a2880a27199b1d85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e6b88f5a7e8481cb8d7312a5b8c7d04 = $(`<div id="html_5e6b88f5a7e8481cb8d7312a5b8c7d04" style="width: 100.0%; height: 100.0%;">城市Boise,所在州ID,邮编83706,周销量518.52</div>`)[0];
+            popup_a5912e6c86ae4759a2880a27199b1d85.setContent(html_5e6b88f5a7e8481cb8d7312a5b8c7d04);
+        
+
+        marker_20b6edc4fbe8469e89a6f0f97e538454.bindPopup(popup_a5912e6c86ae4759a2880a27199b1d85)
+        ;
+
+        
+    
+    
+            var marker_a64a51f6407f4caea7f71196fb6f03ad = L.marker(
+                [40.3979125, -111.8637653],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_e4f1b6fc5b9e4388b81a86a03a05325e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a64a51f6407f4caea7f71196fb6f03ad.setIcon(icon_e4f1b6fc5b9e4388b81a86a03a05325e);
+        
+    
+        var popup_a3dd7ad23d914874972b80b4af8536ad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f967f33c90dc467abe4f5b7776114c59 = $(`<div id="html_f967f33c90dc467abe4f5b7776114c59" style="width: 100.0%; height: 100.0%;">城市American Fork,所在州UT,邮编84003,周销量706.61</div>`)[0];
+            popup_a3dd7ad23d914874972b80b4af8536ad.setContent(html_f967f33c90dc467abe4f5b7776114c59);
+        
+
+        marker_a64a51f6407f4caea7f71196fb6f03ad.bindPopup(popup_a3dd7ad23d914874972b80b4af8536ad)
+        ;
+
+        
+    
+    
+            var marker_601ac10aaa4947afbbff385e86f491cd = L.marker(
+                [41.2970512, -112.0342753],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_afe8bc9148b0445cba9d21d5942d45ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_601ac10aaa4947afbbff385e86f491cd.setIcon(icon_afe8bc9148b0445cba9d21d5942d45ed);
+        
+    
+        var popup_0ab6ed58a9904232850f64910317ebf3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e5de34f632f4809966ed7c52f72a8dd = $(`<div id="html_1e5de34f632f4809966ed7c52f72a8dd" style="width: 100.0%; height: 100.0%;">城市Ogden,所在州UT,邮编84414,周销量613.67</div>`)[0];
+            popup_0ab6ed58a9904232850f64910317ebf3.setContent(html_1e5de34f632f4809966ed7c52f72a8dd);
+        
+
+        marker_601ac10aaa4947afbbff385e86f491cd.bindPopup(popup_0ab6ed58a9904232850f64910317ebf3)
+        ;
+
+        
+    
+    
+            var marker_3bb50f527d654203818fdb9539271018 = L.marker(
+                [38.4105114, -110.1185433],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_62a090772d5d4912a25c096b3b70aac3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3bb50f527d654203818fdb9539271018.setIcon(icon_62a090772d5d4912a25c096b3b70aac3);
+        
+    
+        var popup_c884d69990e34bd7a49095aed427c7e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b60265773c9f4e58b6ca5027a981f3da = $(`<div id="html_b60265773c9f4e58b6ca5027a981f3da" style="width: 100.0%; height: 100.0%;">城市Moab,所在州UT,邮编84532,周销量339.5</div>`)[0];
+            popup_c884d69990e34bd7a49095aed427c7e8.setContent(html_b60265773c9f4e58b6ca5027a981f3da);
+        
+
+        marker_3bb50f527d654203818fdb9539271018.bindPopup(popup_c884d69990e34bd7a49095aed427c7e8)
+        ;
+
+        
+    
+    
+            var marker_3bc59be4b3034018a76cd4284ef7f5ce = L.marker(
+                [37.1418522, -113.5623505],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_0234d93c658c414096115c877f8430a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3bc59be4b3034018a76cd4284ef7f5ce.setIcon(icon_0234d93c658c414096115c877f8430a3);
+        
+    
+        var popup_86cf53065e1d4beaaaab76222ef855e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d34863e08c5409da72a26465f9aef8b = $(`<div id="html_7d34863e08c5409da72a26465f9aef8b" style="width: 100.0%; height: 100.0%;">城市Washington,所在州UT,邮编84780,周销量648.88</div>`)[0];
+            popup_86cf53065e1d4beaaaab76222ef855e6.setContent(html_7d34863e08c5409da72a26465f9aef8b);
+        
+
+        marker_3bc59be4b3034018a76cd4284ef7f5ce.bindPopup(popup_86cf53065e1d4beaaaab76222ef855e6)
+        ;
+
+        
+    
+    
+            var marker_5fabd7787d804ea3817f552aa0a12e92 = L.marker(
+                [33.5084537, -112.1065985],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_fb6cfe33c28d4d80b02281c111bb1cd3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5fabd7787d804ea3817f552aa0a12e92.setIcon(icon_fb6cfe33c28d4d80b02281c111bb1cd3);
+        
+    
+        var popup_a4e453c0ab044c669690fcfb7333fbc1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4ede822b18246aab2a6767066bd320a = $(`<div id="html_c4ede822b18246aab2a6767066bd320a" style="width: 100.0%; height: 100.0%;">城市Phoeniz,所在州AZ,邮编85012,周销量685.85</div>`)[0];
+            popup_a4e453c0ab044c669690fcfb7333fbc1.setContent(html_c4ede822b18246aab2a6767066bd320a);
+        
+
+        marker_5fabd7787d804ea3817f552aa0a12e92.bindPopup(popup_a4e453c0ab044c669690fcfb7333fbc1)
+        ;
+
+        
+    
+    
+            var marker_f26b53bdbcec4d5db775582bff4a3e65 = L.marker(
+                [35.3670111, -111.6361096],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_df12582934e947459ad22b8a33f94078 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f26b53bdbcec4d5db775582bff4a3e65.setIcon(icon_df12582934e947459ad22b8a33f94078);
+        
+    
+        var popup_fcaef23e6df049d5bc9309f413ca0b1a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d262ecd1f07e4f22b1b006f2356818fe = $(`<div id="html_d262ecd1f07e4f22b1b006f2356818fe" style="width: 100.0%; height: 100.0%;">城市Flagstaff,所在州AZ,邮编86004,周销量654.43</div>`)[0];
+            popup_fcaef23e6df049d5bc9309f413ca0b1a.setContent(html_d262ecd1f07e4f22b1b006f2356818fe);
+        
+
+        marker_f26b53bdbcec4d5db775582bff4a3e65.bindPopup(popup_fcaef23e6df049d5bc9309f413ca0b1a)
+        ;
+
+        
+    
+    
+            var marker_d649ac203fc549c5960eca5af85200f0 = L.marker(
+                [35.8413033, -110.4278634],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_871f1716286c47b8b6a4ffd25701284d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d649ac203fc549c5960eca5af85200f0.setIcon(icon_871f1716286c47b8b6a4ffd25701284d);
+        
+    
+        var popup_7ae7773d710f4441af1d4c0e7a7c6c6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_867c0533e7704e9daf9c05ead5d1accc = $(`<div id="html_867c0533e7704e9daf9c05ead5d1accc" style="width: 100.0%; height: 100.0%;">城市Polacca,所在州AZ,邮编86042,周销量522.4</div>`)[0];
+            popup_7ae7773d710f4441af1d4c0e7a7c6c6e.setContent(html_867c0533e7704e9daf9c05ead5d1accc);
+        
+
+        marker_d649ac203fc549c5960eca5af85200f0.bindPopup(popup_7ae7773d710f4441af1d4c0e7a7c6c6e)
+        ;
+
+        
+    
+    
+            var marker_c17802be85014f3d87e6de511b6a2edc = L.marker(
+                [34.5919182, -112.378131],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_dc1a9d6431d54218873fbb90f9265a43 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c17802be85014f3d87e6de511b6a2edc.setIcon(icon_dc1a9d6431d54218873fbb90f9265a43);
+        
+    
+        var popup_33e69920b183454ea7148650be9b4656 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07196116a8e94b3c8be87bcf012fbac9 = $(`<div id="html_07196116a8e94b3c8be87bcf012fbac9" style="width: 100.0%; height: 100.0%;">城市Prescott Valley,所在州AZ,邮编86314,周销量788.67</div>`)[0];
+            popup_33e69920b183454ea7148650be9b4656.setContent(html_07196116a8e94b3c8be87bcf012fbac9);
+        
+
+        marker_c17802be85014f3d87e6de511b6a2edc.bindPopup(popup_33e69920b183454ea7148650be9b4656)
+        ;
+
+        
+    
+    
+            var marker_6734a7b290e945399003d6db15af1a18 = L.marker(
+                [35.0064215, -114.6306995],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_200dff07e945480f8626bfc35bf7fe72 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6734a7b290e945399003d6db15af1a18.setIcon(icon_200dff07e945480f8626bfc35bf7fe72);
+        
+    
+        var popup_c42721880ac441d1b2673801282abebc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d36942fe29354127963c7514236f1437 = $(`<div id="html_d36942fe29354127963c7514236f1437" style="width: 100.0%; height: 100.0%;">城市Fort Mohave,所在州AZ,邮编86426,周销量743.05</div>`)[0];
+            popup_c42721880ac441d1b2673801282abebc.setContent(html_d36942fe29354127963c7514236f1437);
+        
+
+        marker_6734a7b290e945399003d6db15af1a18.bindPopup(popup_c42721880ac441d1b2673801282abebc)
+        ;
+
+        
+    
+    
+            var marker_8c5db8e80a6e40028132609aadbff1f3 = L.marker(
+                [36.1506562, -115.1454904],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_fbdb153ef56a49d68798cda719b3d539 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8c5db8e80a6e40028132609aadbff1f3.setIcon(icon_fbdb153ef56a49d68798cda719b3d539);
+        
+    
+        var popup_4ec82f5eff584444b66d82c935658764 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49ef04c465c9447b83b480f4f5a2cba6 = $(`<div id="html_49ef04c465c9447b83b480f4f5a2cba6" style="width: 100.0%; height: 100.0%;">城市Las Vegas,所在州NV,邮编89104,周销量1033.97</div>`)[0];
+            popup_4ec82f5eff584444b66d82c935658764.setContent(html_49ef04c465c9447b83b480f4f5a2cba6);
+        
+
+        marker_8c5db8e80a6e40028132609aadbff1f3.bindPopup(popup_4ec82f5eff584444b66d82c935658764)
+        ;
+
+        
+    
+    
+            var marker_59d74bed7eac41e2a0263b823fe77d20 = L.marker(
+                [39.6318677, -119.2866212],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_57fe649c5e0d43779e2f61a9a774cbdc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_59d74bed7eac41e2a0263b823fe77d20.setIcon(icon_57fe649c5e0d43779e2f61a9a774cbdc);
+        
+    
+        var popup_b484b76e9b6f46f2a34aad3cf5c6cc29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c34f48a19c8c4428935fa0d2cefa1485 = $(`<div id="html_c34f48a19c8c4428935fa0d2cefa1485" style="width: 100.0%; height: 100.0%;">城市Fernley,所在州NV,邮编89408,周销量664.08</div>`)[0];
+            popup_b484b76e9b6f46f2a34aad3cf5c6cc29.setContent(html_c34f48a19c8c4428935fa0d2cefa1485);
+        
+
+        marker_59d74bed7eac41e2a0263b823fe77d20.bindPopup(popup_b484b76e9b6f46f2a34aad3cf5c6cc29)
+        ;
+
+        
+    
+    
+            var marker_1616f04c72d1460fa90b4e7543031326 = L.marker(
+                [39.4949173, -119.8619634],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_81e7d9f754d94a38af95ba31ef2edf3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1616f04c72d1460fa90b4e7543031326.setIcon(icon_81e7d9f754d94a38af95ba31ef2edf3d);
+        
+    
+        var popup_f6698cd76e634341bba87b731310155a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d7dc82ad90cb442e83b3d708b3df0b6a = $(`<div id="html_d7dc82ad90cb442e83b3d708b3df0b6a" style="width: 100.0%; height: 100.0%;">城市Reno,所在州NV,邮编89509,周销量707.57</div>`)[0];
+            popup_f6698cd76e634341bba87b731310155a.setContent(html_d7dc82ad90cb442e83b3d708b3df0b6a);
+        
+
+        marker_1616f04c72d1460fa90b4e7543031326.bindPopup(popup_f6698cd76e634341bba87b731310155a)
+        ;
+
+        
+    
+    
+            var marker_46a14ffd81d347589e969e85044d0f8f = L.marker(
+                [40.5396657, -116.7590082],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_376b711eab5d43438964273cd676312c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_46a14ffd81d347589e969e85044d0f8f.setIcon(icon_376b711eab5d43438964273cd676312c);
+        
+    
+        var popup_0758246da75d4ef8ba9847c6b66a53c9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6c13e89029a4aa3bb1bd12d90118ad2 = $(`<div id="html_d6c13e89029a4aa3bb1bd12d90118ad2" style="width: 100.0%; height: 100.0%;">城市Carlin,所在州NV,邮编89822,周销量449.57</div>`)[0];
+            popup_0758246da75d4ef8ba9847c6b66a53c9.setContent(html_d6c13e89029a4aa3bb1bd12d90118ad2);
+        
+
+        marker_46a14ffd81d347589e969e85044d0f8f.bindPopup(popup_0758246da75d4ef8ba9847c6b66a53c9)
+        ;
+
+        
+    
+    
+            var marker_4a6eaa71acf148cc968a2a4cbaa48004 = L.marker(
+                [33.9204833, -118.2921811],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_1fec7b562b614eb7b1e7d2142171beff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4a6eaa71acf148cc968a2a4cbaa48004.setIcon(icon_1fec7b562b614eb7b1e7d2142171beff);
+        
+    
+        var popup_32d1d97b99814ce397702501e20ed4db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5d3d532a7272470eb2485e38ec1a35fe = $(`<div id="html_5d3d532a7272470eb2485e38ec1a35fe" style="width: 100.0%; height: 100.0%;">城市Los Angeles,所在州CA,邮编90061,周销量1106.29</div>`)[0];
+            popup_32d1d97b99814ce397702501e20ed4db.setContent(html_5d3d532a7272470eb2485e38ec1a35fe);
+        
+
+        marker_4a6eaa71acf148cc968a2a4cbaa48004.bindPopup(popup_32d1d97b99814ce397702501e20ed4db)
+        ;
+
+        
+    
+    
+            var marker_e4a5c93c33d446079462b052e0a7e6f0 = L.marker(
+                [34.202764, -119.195201],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_163a4f70fcaa4e4fb3b76c04bdd10ad1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e4a5c93c33d446079462b052e0a7e6f0.setIcon(icon_163a4f70fcaa4e4fb3b76c04bdd10ad1);
+        
+    
+        var popup_6f6dc5b919a94acf947eaf3fb0f7475a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_422f6fc5b4e54ed0aa4eba6e0484d463 = $(`<div id="html_422f6fc5b4e54ed0aa4eba6e0484d463" style="width: 100.0%; height: 100.0%;">城市Oxnard,所在州CA,邮编93030,周销量716.37</div>`)[0];
+            popup_6f6dc5b919a94acf947eaf3fb0f7475a.setContent(html_422f6fc5b4e54ed0aa4eba6e0484d463);
+        
+
+        marker_e4a5c93c33d446079462b052e0a7e6f0.bindPopup(popup_6f6dc5b919a94acf947eaf3fb0f7475a)
+        ;
+
+        
+    
+    
+            var marker_346af891ed75464591d285dc8c672d00 = L.marker(
+                [34.627711, -120.3548891],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_29300791f03a417bae1ad7e1c6383484 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_346af891ed75464591d285dc8c672d00.setIcon(icon_29300791f03a417bae1ad7e1c6383484);
+        
+    
+        var popup_90ccadc62d5344f5bac584db88ca8bc3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85bbac48bc33492f8a25694f098cd81b = $(`<div id="html_85bbac48bc33492f8a25694f098cd81b" style="width: 100.0%; height: 100.0%;">城市Buellton,所在州CA,邮编93427,周销量571.88</div>`)[0];
+            popup_90ccadc62d5344f5bac584db88ca8bc3.setContent(html_85bbac48bc33492f8a25694f098cd81b);
+        
+
+        marker_346af891ed75464591d285dc8c672d00.bindPopup(popup_90ccadc62d5344f5bac584db88ca8bc3)
+        ;
+
+        
+    
+    
+            var marker_662a126dcaed41fbae0668740ab5badb = L.marker(
+                [36.7690069, -119.8740718],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_b5ebf6d740c5416e8c4ca3ea84f02add = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_662a126dcaed41fbae0668740ab5badb.setIcon(icon_b5ebf6d740c5416e8c4ca3ea84f02add);
+        
+    
+        var popup_48588e1eedff4e5989cdc1928d66a83a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a49c973de5f84d5fa9e0b14bdf55cb11 = $(`<div id="html_a49c973de5f84d5fa9e0b14bdf55cb11" style="width: 100.0%; height: 100.0%;">城市Fresno,所在州CA,邮编93703,周销量1164.45</div>`)[0];
+            popup_48588e1eedff4e5989cdc1928d66a83a.setContent(html_a49c973de5f84d5fa9e0b14bdf55cb11);
+        
+
+        marker_662a126dcaed41fbae0668740ab5badb.bindPopup(popup_48588e1eedff4e5989cdc1928d66a83a)
+        ;
+
+        
+    
+    
+            var marker_cb935569c75847e8a2be452541a86a22 = L.marker(
+                [36.7256652, -121.6663414],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_36d5aa04736148da973f9a16e55ec83a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cb935569c75847e8a2be452541a86a22.setIcon(icon_36d5aa04736148da973f9a16e55ec83a);
+        
+    
+        var popup_e8e71230f96f4082ba295b01bbaab1e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_941e6354b5b94e2c9ad5fc3dfde61f4d = $(`<div id="html_941e6354b5b94e2c9ad5fc3dfde61f4d" style="width: 100.0%; height: 100.0%;">城市Salinas,所在州CA,邮编93906,周销量894.17</div>`)[0];
+            popup_e8e71230f96f4082ba295b01bbaab1e6.setContent(html_941e6354b5b94e2c9ad5fc3dfde61f4d);
+        
+
+        marker_cb935569c75847e8a2be452541a86a22.bindPopup(popup_e8e71230f96f4082ba295b01bbaab1e6)
+        ;
+
+        
+    
+    
+            var marker_9264b06a7f7444f49c01bf2dde11b515 = L.marker(
+                [37.5413638, -122.3212766],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_0517540a7274421f99bc3f0ba8c67856 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9264b06a7f7444f49c01bf2dde11b515.setIcon(icon_0517540a7274421f99bc3f0ba8c67856);
+        
+    
+        var popup_b21e4db90a504587837defb3e4484583 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_26530f1aa9d84b98a12a939560d868a3 = $(`<div id="html_26530f1aa9d84b98a12a939560d868a3" style="width: 100.0%; height: 100.0%;">城市San Mateo,所在州CA,邮编94403,周销量724.0699999999999</div>`)[0];
+            popup_b21e4db90a504587837defb3e4484583.setContent(html_26530f1aa9d84b98a12a939560d868a3);
+        
+
+        marker_9264b06a7f7444f49c01bf2dde11b515.bindPopup(popup_b21e4db90a504587837defb3e4484583)
+        ;
+
+        
+    
+    
+            var marker_53258f771a3346079aa989b145aadcbe = L.marker(
+                [37.350831, -122.0202445],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_9bbf7f10748c489cb2f8929f513c5eae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_53258f771a3346079aa989b145aadcbe.setIcon(icon_9bbf7f10748c489cb2f8929f513c5eae);
+        
+    
+        var popup_8e31d36905004d9d9fc1408913928fd5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bb2d5a5f2e164093a07d85591f1f71dd = $(`<div id="html_bb2d5a5f2e164093a07d85591f1f71dd" style="width: 100.0%; height: 100.0%;">城市Santa Clara,所在州CA,邮编95051,周销量806.26</div>`)[0];
+            popup_8e31d36905004d9d9fc1408913928fd5.setContent(html_bb2d5a5f2e164093a07d85591f1f71dd);
+        
+
+        marker_53258f771a3346079aa989b145aadcbe.bindPopup(popup_8e31d36905004d9d9fc1408913928fd5)
+        ;
+
+        
+    
+    
+            var marker_d4c41597329b44dabb97cfc8fac56c2b = L.marker(
+                [39.0762392, -121.8646703],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_0143e46f3c0244bc804f9feeadd48b6e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d4c41597329b44dabb97cfc8fac56c2b.setIcon(icon_0143e46f3c0244bc804f9feeadd48b6e);
+        
+    
+        var popup_1772768868d24a998c136b32724cd0d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f917648cff1346f295150b81fe55b43d = $(`<div id="html_f917648cff1346f295150b81fe55b43d" style="width: 100.0%; height: 100.0%;">城市Yuba City,所在州CA,邮编95993,周销量783.16</div>`)[0];
+            popup_1772768868d24a998c136b32724cd0d1.setContent(html_f917648cff1346f295150b81fe55b43d);
+        
+
+        marker_d4c41597329b44dabb97cfc8fac56c2b.bindPopup(popup_1772768868d24a998c136b32724cd0d1)
+        ;
+
+        
+    
+    
+            var marker_174ea3f692f44efc8b664fa8f656870a = L.marker(
+                [40.5413504, -121.0953464],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_e711db4f58064c81a35d906466bfe094 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_174ea3f692f44efc8b664fa8f656870a.setIcon(icon_e711db4f58064c81a35d906466bfe094);
+        
+    
+        var popup_96668c23c1a54dd88a8c05286914ab1f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_00550ebce8cf408f824dea987ab3fe1b = $(`<div id="html_00550ebce8cf408f824dea987ab3fe1b" style="width: 100.0%; height: 100.0%;">城市Susanville,所在州CA,邮编96130,周销量488.46</div>`)[0];
+            popup_96668c23c1a54dd88a8c05286914ab1f.setContent(html_00550ebce8cf408f824dea987ab3fe1b);
+        
+
+        marker_174ea3f692f44efc8b664fa8f656870a.bindPopup(popup_96668c23c1a54dd88a8c05286914ab1f)
+        ;
+
+        
+    
+    
+            var marker_7421e2fa5bb94a709b3fd8269637c6f9 = L.marker(
+                [45.2401109, -122.8709588],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_9b22ac71ea0646239a9f97e886916f24 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7421e2fa5bb94a709b3fd8269637c6f9.setIcon(icon_9b22ac71ea0646239a9f97e886916f24);
+        
+    
+        var popup_de93e8a750ae4e89aca879981339cb6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7c2c27b32de415b82ee4cc5158f79c0 = $(`<div id="html_a7c2c27b32de415b82ee4cc5158f79c0" style="width: 100.0%; height: 100.0%;">城市Aurora,所在州OR,邮编97002,周销量665.42</div>`)[0];
+            popup_de93e8a750ae4e89aca879981339cb6e.setContent(html_a7c2c27b32de415b82ee4cc5158f79c0);
+        
+
+        marker_7421e2fa5bb94a709b3fd8269637c6f9.bindPopup(popup_de93e8a750ae4e89aca879981339cb6e)
+        ;
+
+        
+    
+    
+            var marker_b9d35e88a23e4cf095c9b9655e3b058a = L.marker(
+                [42.4732868, -122.8804475],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_fd1199c5fb21461eb18f10788a038d50 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b9d35e88a23e4cf095c9b9655e3b058a.setIcon(icon_fd1199c5fb21461eb18f10788a038d50);
+        
+    
+        var popup_44f8d397ad1e4bb192d2f28ec794c320 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_675e7c088ec64e26afbe2fe365558917 = $(`<div id="html_675e7c088ec64e26afbe2fe365558917" style="width: 100.0%; height: 100.0%;">城市Eagle Point,所在州OR,邮编97524,周销量935.87</div>`)[0];
+            popup_44f8d397ad1e4bb192d2f28ec794c320.setContent(html_675e7c088ec64e26afbe2fe365558917);
+        
+
+        marker_b9d35e88a23e4cf095c9b9655e3b058a.bindPopup(popup_44f8d397ad1e4bb192d2f28ec794c320)
+        ;
+
+        
+    
+    
+            var marker_9dfa5ec05fbc44e4824faeddf4d9dc4a = L.marker(
+                [45.903112, -118.5985238],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_3a02e506abba4927b6eabe814c8cf08f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9dfa5ec05fbc44e4824faeddf4d9dc4a.setIcon(icon_3a02e506abba4927b6eabe814c8cf08f);
+        
+    
+        var popup_bbf68a3614da44a9a565ee6dd5775e45 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_22cd09498c81472faed0596fc11a6d7d = $(`<div id="html_22cd09498c81472faed0596fc11a6d7d" style="width: 100.0%; height: 100.0%;">城市Milton Freewater,所在州OR,邮编97862,周销量817.06</div>`)[0];
+            popup_bbf68a3614da44a9a565ee6dd5775e45.setContent(html_22cd09498c81472faed0596fc11a6d7d);
+        
+
+        marker_9dfa5ec05fbc44e4824faeddf4d9dc4a.bindPopup(popup_bbf68a3614da44a9a565ee6dd5775e45)
+        ;
+
+        
+    
+    
+            var marker_8eddb23b92da4ae5959732526f0fbb5d = L.marker(
+                [44.0534262, -118.1525987],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_14257eeb9d984bca819ebfe56974108e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8eddb23b92da4ae5959732526f0fbb5d.setIcon(icon_14257eeb9d984bca819ebfe56974108e);
+        
+    
+        var popup_6165c219826e417abdd20a4dc6607fc7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_577c235e752d43408bab8b39e2f4a982 = $(`<div id="html_577c235e752d43408bab8b39e2f4a982" style="width: 100.0%; height: 100.0%;">城市Westfall,所在州OR,邮编97920,周销量546.5699999999999</div>`)[0];
+            popup_6165c219826e417abdd20a4dc6607fc7.setContent(html_577c235e752d43408bab8b39e2f4a982);
+        
+
+        marker_8eddb23b92da4ae5959732526f0fbb5d.bindPopup(popup_6165c219826e417abdd20a4dc6607fc7)
+        ;
+
+        
+    
+    
+            var marker_0fe70d06ba694c9db15378865b12837c = L.marker(
+                [47.4994736, -122.1464225],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_6dc1d3e62796463ca513beb4d2917697 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0fe70d06ba694c9db15378865b12837c.setIcon(icon_6dc1d3e62796463ca513beb4d2917697);
+        
+    
+        var popup_8d153b34895641d4b6abb7f081b148c7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_70fd4e9026c3495eb6765cdabf0a54f9 = $(`<div id="html_70fd4e9026c3495eb6765cdabf0a54f9" style="width: 100.0%; height: 100.0%;">城市Renton,所在州WA,邮编98059,周销量968.45</div>`)[0];
+            popup_8d153b34895641d4b6abb7f081b148c7.setContent(html_70fd4e9026c3495eb6765cdabf0a54f9);
+        
+
+        marker_0fe70d06ba694c9db15378865b12837c.bindPopup(popup_8d153b34895641d4b6abb7f081b148c7)
+        ;
+
+        
+    
+    
+            var marker_9838e48390ec4628b5594ff232e20635 = L.marker(
+                [48.857341, -122.7613461],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_b5d6ba274fb84d70a599b5f14793d568 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9838e48390ec4628b5594ff232e20635.setIcon(icon_b5d6ba274fb84d70a599b5f14793d568);
+        
+    
+        var popup_dda8bc3543314b36b43f27e8f43fc1ee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_42c0ba1ef29f46aba05e5d3c47c29c02 = $(`<div id="html_42c0ba1ef29f46aba05e5d3c47c29c02" style="width: 100.0%; height: 100.0%;">城市Ferndale,所在州WA,邮编98248,周销量752.47</div>`)[0];
+            popup_dda8bc3543314b36b43f27e8f43fc1ee.setContent(html_42c0ba1ef29f46aba05e5d3c47c29c02);
+        
+
+        marker_9838e48390ec4628b5594ff232e20635.bindPopup(popup_dda8bc3543314b36b43f27e8f43fc1ee)
+        ;
+
+        
+    
+    
+            var marker_00a617abf79f4808a44b2e288317d0e7 = L.marker(
+                [48.1455179, -119.9039513],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_2cc6e71daa2a4c45ad36b32821615228 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_00a617abf79f4808a44b2e288317d0e7.setIcon(icon_2cc6e71daa2a4c45ad36b32821615228);
+        
+    
+        var popup_43b3757a9ac742018ae0dda0a89e3452 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fc9e3ac0645d4d5baf7988bcfa8eb014 = $(`<div id="html_fc9e3ac0645d4d5baf7988bcfa8eb014" style="width: 100.0%; height: 100.0%;">城市Brewster,所在州WA,邮编98812,周销量679.13</div>`)[0];
+            popup_43b3757a9ac742018ae0dda0a89e3452.setContent(html_fc9e3ac0645d4d5baf7988bcfa8eb014);
+        
+
+        marker_00a617abf79f4808a44b2e288317d0e7.bindPopup(popup_43b3757a9ac742018ae0dda0a89e3452)
+        ;
+
+        
+    
+    
+            var marker_c205923efef54710b7b1188605e509d4 = L.marker(
+                [47.6247378, -117.3997756],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_5aa4d7e18fda4c7c9318a5e09ba4972c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c205923efef54710b7b1188605e509d4.setIcon(icon_5aa4d7e18fda4c7c9318a5e09ba4972c);
+        
+    
+        var popup_e11336ba0cac4467b3b7fe613dfab3dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cc4f2a129b6144e4800296348603ea7c = $(`<div id="html_cc4f2a129b6144e4800296348603ea7c" style="width: 100.0%; height: 100.0%;">城市Spokane,所在州WA,邮编99223,周销量669.4</div>`)[0];
+            popup_e11336ba0cac4467b3b7fe613dfab3dc.setContent(html_cc4f2a129b6144e4800296348603ea7c);
+        
+
+        marker_c205923efef54710b7b1188605e509d4.bindPopup(popup_e11336ba0cac4467b3b7fe613dfab3dc)
+        ;
+
+        
+    
+    
+            var marker_14670fa187544a4a9a05cbb706e4bfaf = L.marker(
+                [46.195097, -119.9912037],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_5595ebbda817495eb111c8da78c88a1a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_14670fa187544a4a9a05cbb706e4bfaf.setIcon(icon_5595ebbda817495eb111c8da78c88a1a);
+        
+    
+        var popup_9b00903b1e774af39682cd609fb01834 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9eb76dda66ae49d7888864a09a646870 = $(`<div id="html_9eb76dda66ae49d7888864a09a646870" style="width: 100.0%; height: 100.0%;">城市Prosser,所在州WA,邮编99350,周销量711.8</div>`)[0];
+            popup_9b00903b1e774af39682cd609fb01834.setContent(html_9eb76dda66ae49d7888864a09a646870);
+        
+
+        marker_14670fa187544a4a9a05cbb706e4bfaf.bindPopup(popup_9b00903b1e774af39682cd609fb01834)
+        ;
+
+        
+    
+    
+            var marker_a51c6ca828a14c0582a9689c7c7f4b0d = L.marker(
+                [40.5365859, -79.9072774],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_677200d731ba4e229ba0c289183f0ddd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a51c6ca828a14c0582a9689c7c7f4b0d.setIcon(icon_677200d731ba4e229ba0c289183f0ddd);
+        
+    
+        var popup_a306543e5e6a479da301849063a7b9ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd1190eb8d704ec9b73621a05937b6da = $(`<div id="html_fd1190eb8d704ec9b73621a05937b6da" style="width: 100.0%; height: 100.0%;">工厂地址Blawnox,邮编15238</div>`)[0];
+            popup_a306543e5e6a479da301849063a7b9ea.setContent(html_fd1190eb8d704ec9b73621a05937b6da);
+        
+
+        marker_a51c6ca828a14c0582a9689c7c7f4b0d.bindPopup(popup_a306543e5e6a479da301849063a7b9ea)
+        ;
+
+        
+    
+    
+            var marker_4fe21bc5d0db449cb446cf472e9f8cf6 = L.marker(
+                [34.0042246, -117.890112],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_4ca8887ad38747c4a3538e17898dea4b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "warehouse-full", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_4fe21bc5d0db449cb446cf472e9f8cf6.setIcon(icon_4ca8887ad38747c4a3538e17898dea4b);
+        
+    
+        var popup_83946e8cdcf64b199ef4f2e4fd43c8b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff07deea813b4de5a8ef647afe84ad6a = $(`<div id="html_ff07deea813b4de5a8ef647afe84ad6a" style="width: 100.0%; height: 100.0%;">地址City of Industry, CA,邮编91789</div>`)[0];
+            popup_83946e8cdcf64b199ef4f2e4fd43c8b6.setContent(html_ff07deea813b4de5a8ef647afe84ad6a);
+        
+
+        marker_4fe21bc5d0db449cb446cf472e9f8cf6.bindPopup(popup_83946e8cdcf64b199ef4f2e4fd43c8b6)
+        ;
+
+        
+    
+    
+            var marker_1c199029dcba4d4ca452e592124a25dc = L.marker(
+                [43.3943435, -124.3851335],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_344cedc936ba4984bccf7f2ef42199a6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "warehouse-full", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_1c199029dcba4d4ca452e592124a25dc.setIcon(icon_344cedc936ba4984bccf7f2ef42199a6);
+        
+    
+        var popup_8e889e15abe84cce851390c0cf047ab6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6327809f84eb4a46b6ffed82cb3a9ab1 = $(`<div id="html_6327809f84eb4a46b6ffed82cb3a9ab1" style="width: 100.0%; height: 100.0%;">地址Coos Bay, OR,邮编97420</div>`)[0];
+            popup_8e889e15abe84cce851390c0cf047ab6.setContent(html_6327809f84eb4a46b6ffed82cb3a9ab1);
+        
+
+        marker_1c199029dcba4d4ca452e592124a25dc.bindPopup(popup_8e889e15abe84cce851390c0cf047ab6)
+        ;
+
+        
+    
+    
+            var marker_0aead556b42043e38d12f4bee8ce4e60 = L.marker(
+                [35.1397612, -114.8511496],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_a5d2fcb9609d4785a236036c5f56e945 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "warehouse-full", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_0aead556b42043e38d12f4bee8ce4e60.setIcon(icon_a5d2fcb9609d4785a236036c5f56e945);
+        
+    
+        var popup_70d6524b37f744f4a32778dca71ab38a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b064eed059c141deb5c0616f6ca4d9e8 = $(`<div id="html_b064eed059c141deb5c0616f6ca4d9e8" style="width: 100.0%; height: 100.0%;">地址Laughlin, NV,邮编89029</div>`)[0];
+            popup_70d6524b37f744f4a32778dca71ab38a.setContent(html_b064eed059c141deb5c0616f6ca4d9e8);
+        
+
+        marker_0aead556b42043e38d12f4bee8ce4e60.bindPopup(popup_70d6524b37f744f4a32778dca71ab38a)
+        ;
+
+        
+    
+    
+            var marker_f8d8b3fbc7454f1fbba374a9e78e32e0 = L.marker(
+                [42.2149496, -112.0229526],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_14fc1cdb70ca4718b11169eda814a66f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "warehouse-full", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_f8d8b3fbc7454f1fbba374a9e78e32e0.setIcon(icon_14fc1cdb70ca4718b11169eda814a66f);
+        
+    
+        var popup_e89e7e665ebd4b0ab3643afafb797ad4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_117adc8ea39f46f4b80b9501ce7369f4 = $(`<div id="html_117adc8ea39f46f4b80b9501ce7369f4" style="width: 100.0%; height: 100.0%;">地址Preston, ID,邮编83263</div>`)[0];
+            popup_e89e7e665ebd4b0ab3643afafb797ad4.setContent(html_117adc8ea39f46f4b80b9501ce7369f4);
+        
+
+        marker_f8d8b3fbc7454f1fbba374a9e78e32e0.bindPopup(popup_e89e7e665ebd4b0ab3643afafb797ad4)
+        ;
+
+        
+    
+    
+            var marker_e059659da69f4febb963ad1531866e96 = L.marker(
+                [35.9622969, -111.7537956],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_904987dd25ea48389e2b1098c3533310 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "warehouse-full", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_e059659da69f4febb963ad1531866e96.setIcon(icon_904987dd25ea48389e2b1098c3533310);
+        
+    
+        var popup_3b62eedaf3b9469186d73f7cba47f40a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6dc861cab4e2434ab91afbc457ca5a0e = $(`<div id="html_6dc861cab4e2434ab91afbc457ca5a0e" style="width: 100.0%; height: 100.0%;">地址Tuba City, AZ,邮编86045</div>`)[0];
+            popup_3b62eedaf3b9469186d73f7cba47f40a.setContent(html_6dc861cab4e2434ab91afbc457ca5a0e);
+        
+
+        marker_e059659da69f4febb963ad1531866e96.bindPopup(popup_3b62eedaf3b9469186d73f7cba47f40a)
+        ;
+
+        
+    
+    
+            var marker_6f89c5378f544d118f40c2aecf3bb6f5 = L.marker(
+                [38.3404312, -121.9941118],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_bce66a5be4274ef6a4e43d466c4d840c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "warehouse-full", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_6f89c5378f544d118f40c2aecf3bb6f5.setIcon(icon_bce66a5be4274ef6a4e43d466c4d840c);
+        
+    
+        var popup_72271cb5f0d64956bedf00c0b2d2bb70 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_085b35e2dd304f2ebc7a032c8d62f206 = $(`<div id="html_085b35e2dd304f2ebc7a032c8d62f206" style="width: 100.0%; height: 100.0%;">地址Vacaville, CA,邮编95687</div>`)[0];
+            popup_72271cb5f0d64956bedf00c0b2d2bb70.setContent(html_085b35e2dd304f2ebc7a032c8d62f206);
+        
+
+        marker_6f89c5378f544d118f40c2aecf3bb6f5.bindPopup(popup_72271cb5f0d64956bedf00c0b2d2bb70)
+        ;
+
+        
+    
+    
+            var marker_d4f0f921e8c240e48a4f0c5f0d9db27f = L.marker(
+                [46.1015543, -118.5329188],
+                {}
+            ).addTo(map_9ac86f5130934e46a75271b129ab5f72);
+        
+    
+            var icon_84e9a178031a41358ba32caa3d90cc88 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "warehouse-full", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_d4f0f921e8c240e48a4f0c5f0d9db27f.setIcon(icon_84e9a178031a41358ba32caa3d90cc88);
+        
+    
+        var popup_32b3ade230144a3e98712aa4f9f59cfc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_deb50e29de3a4b11bdb3680ce91f88ff = $(`<div id="html_deb50e29de3a4b11bdb3680ce91f88ff" style="width: 100.0%; height: 100.0%;">地址Walla Walla, WA,邮编99362</div>`)[0];
+            popup_32b3ade230144a3e98712aa4f9f59cfc.setContent(html_deb50e29de3a4b11bdb3680ce91f88ff);
+        
+
+        marker_d4f0f921e8c240e48a4f0c5f0d9db27f.bindPopup(popup_32b3ade230144a3e98712aa4f9f59cfc)
+        ;
+
+        
+    
+</script>
