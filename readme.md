@@ -151,3 +151,19 @@ SD公司在Blawnox拥有一家文具加工厂，产品原料来自传统的办�
  
 
 
+
+## **四、开发进度**
+
+- [x] 初步的模型（一个工厂、多个转运仓库、多个客户）
+
+- [ ] 多种方式添加数据（数据源：字典、Json、数据库...）
+
+- [ ] 根据邮政编码获取经纬度（Geocoding，采用免费的`geoapify`API接口）
+
+  API Example: https://apidocs.geoapify.com/docs/geocoding/forward-geocoding/#api
+
+- [ ] 根据经纬度获取两点之间的道路距离以及不同车型的预计时间（Routing，采用免费的`geoapify`API接口）
+
+  API Example: https://apidocs.geoapify.com/docs/routing/#routing
+
+- [ ] 模型求解数据的不同类型格式导出
