@@ -3,6 +3,7 @@ import math
 import pandas as pd
 import json
 import math
+import requests
 from pyomo.environ import *
 import pyomo.environ as pyo
 
@@ -10,7 +11,8 @@ import pyomo.environ as pyo
 class Network(object):
 
     def __init__(self, factoryToCustomer, factoryToDc, dcToCustomer, factoryToCustomerMin, dcToCustomerMin,
-                 handling_cost, zipcode, demand, order_num, distance, time):
+                 handling_cost, demand, factoryZipCode, dcZipCode, customerZipCode, order_num, apikey):
+
         '''
         初始化相关参数
         :param factoryToCustomer:工厂与客户之间的运费
@@ -31,49 +33,84 @@ class Network(object):
         self.__factoryToCustomerMin = factoryToCustomerMin
         self.__dcToCustomerMin = dcToCustomerMin
         self.__handling_cost = handling_cost
-        self.__zipcode = zipcode
+
+        self.__factoryZipCode = factoryZipCode
+        self.__dcZipCode = dcZipCode
+        self.__customerZipCode = customerZipCode
+        self.__cityZipCode = {}
+        self.__cityZipCode.update(self.__factoryZipCode)
+        self.__cityZipCode.update(self.__dcZipCode)
+        self.__cityZipCode.update(self.__customerZipCode)
+
         self.__demand = demand
         self.__order_num = order_num
 
-        # 以下两个属性可以调用API方法进行替换（API方法待完成）
-        self.__distance = distance
-        self.__time = time
-
         self.__factoryList = list(set([x for x, _ in self.__factoryToCustomer.keys()]))
-        # print(f'factory长度为{len(self.__factoryList)}')
         self.__dcList = list(set([x for _, x in self.__factoryToDc.keys()]))
-        # print(f'dc长度为{len(self.__dcList)}')
-        self.__customerList = demand.keys()
-        # print(f'customer长度为{len(self.__customerList)}')
+        self.__customerList = list(self.__demand.keys())
+        self.__cityList = self.__factoryList + self.__dcList + self.__customerList
 
-    def add_data(self):
-        '''
-        通过不同数据源添加数据添加数据（字典或者Json等）
-        '''
-        pass
+        self.__distance = self.get_transport_info(apikey)[0]
+        self.__time = self.get_transport_info(apikey)[1]
 
-    def get_coordinate(self):
-        '''
-        通过API获取经纬度
-        Reference API: https://apidocs.geoapify.com/docs/geocoding/forward-geocoding/#api
-        '''
-        pass
+    def get_coordinate(self, city, zipCode, apikey):
+        base_url = 'https://api.geoapify.com/v1/geocode/search'  # 官方给出的API查询接口
 
-    def get_transport_info(self):
-        '''
-        通过API传入两点间的经纬度获取运输距离和所用交通工具的运输时间
-        Reference API: https://apidocs.geoapify.com/docs/routing/#routing
-        '''
-        pass
+        request_parameters = {
+            'apiKey': apikey,  # 这里填自己获取的API密钥
+            'postcode': zipCode,  # 这里填地址的邮政编码
+            'text': city,  # 这里填地址
+            'format': 'json'  # 返回json类型格式的数据
+        }
+
+        res = requests.get(base_url, params=request_parameters)
+        return [res.json()['results'][0]['lon'], res.json()['results'][0]['lat']]
+
+    def get_transport_info(self, apikey):
+        distance = {}
+        time = {}
+        source = {}
+        sourceList = []
+        for city in self.__cityList:
+            source['location'] = self.get_coordinate(city, self.__cityZipCode[city], apikey)
+            sourceList.append(source)
+
+
+        baseUrl = "https://api.geoapify.com/v1/routematrix?apiKey=" + apikey
+        # data = {
+        #     "mode": "truck",
+        #     "sources": sourceList,
+        #     "targets": sourceList
+        # }
+        # res = requests.post(url=baseUrl, json=data)
+
+        for i in range(len(self.__cityList) - 1):
+            start = self.__cityList[i]
+            data = {
+                "mode": "truck",
+                "sources": [sourceList[i]],
+                "targets": sourceList
+            }
+            res = requests.post(url=baseUrl, json=data).json()['sources_to_targets']
+
+            for j in range(i + 1, len(self.__cityList)):
+                end = self.__cityList[j]
+                distance[(start, end)] = res[0][j]['distance']
+                time[(start, end)] = res[0][j]['time']
+
+        return distance, time
 
     def add_model(self):
         model = pyo.ConcreteModel(name="Network Optimization Model")
+
         model.ifDc = pyo.Var(self.__dcList, within=pyo.Binary)  # 是否建立转运中心
         model.ifDcToCustomer = pyo.Var(self.__dcList, self.__customerList, within=pyo.Binary)  # 是否从转运中心发往客户
-        model.cost_factoryTocustomer = pyo.Var(self.__factoryList, self.__customerList, within=pyo.NonNegativeReals)  # 客户从工厂发货的费用（直运方式）
+        model.cost_factoryTocustomer = pyo.Var(self.__factoryList, self.__customerList,
+                                               within=pyo.NonNegativeReals)  # 客户从工厂发货的费用（直运方式）
         model.cost_dcTocustomer = pyo.Var(self.__dcList, self.__customerList,
                                           within=pyo.NonNegativeReals)  # 客户从仓库发货的费用（转运方式后半程）
-        model.truckload_num = pyo.Var(self.__factoryList ,self.__dcList, within=pyo.NonNegativeIntegers)  # 从工厂到某个仓库的整车运输次数
+        model.truckload_num = pyo.Var(self.__factoryList, self.__dcList,
+                                      within=pyo.NonNegativeIntegers)  # 从工厂到某个仓库的整车运输次数
 
         # Create Objective Function
         # 最小化运输总成本的目标函数
@@ -137,18 +174,16 @@ class Network(object):
 
         model.qualify_cost_fc_rule = pyo.Constraint(self.__factoryList, self.__customerList, rule=qualify_cost_fc_rule)
 
-        self.__model = model
-        return self.__model
+        return model
 
-
-    def solve_model(self, solver):
+    def solve_model(self, solverName):
         # Solve Model
-        opt = pyo.SolverFactory(solver)
+        opt = pyo.SolverFactory(solverName, solver_io="python")
+        self.__model = self.add_model()
         opt.solve(self.__model)
+
         self.__model.display()
-
         self.__model.pprint()
-
 
     def export_data(self):
         '''
@@ -161,6 +196,7 @@ test_data_path = './test/data/data.xlsx'
 
 # 读取excel数据源的所有数据
 data_Indices = pd.read_excel(test_data_path,sheet_name='Indices')
+data_zipcode = pd.read_excel(test_data_path, sheet_name='Zipcode', index_col = 0)
 data_Cost_matrix = pd.read_excel(test_data_path,sheet_name='Cost',index_col=0)
 data_Handling_Cost = pd.read_excel(test_data_path,sheet_name='Handling Cost',index_col=0)
 data_Minimum_Cost_matrix = pd.read_excel(test_data_path,sheet_name='Minimum Cost',index_col=0)
@@ -185,12 +221,17 @@ dcToCustomer = {(depot, customer): data_Cost_matrix.at[depot, customer] for depo
 factoryToCustomerMin = {(factory, customer): data_Minimum_Cost_matrix.at[factory, customer] for factory in raw_Factories for customer in raw_Customers}  # 工厂到顾客的最低运费
 dcToCustomerMin = {(depot, customer): data_Minimum_Cost_matrix.at[depot, customer] for depot in raw_Depots for customer in raw_Customers}  # 仓库到顾客的最低运费
 handling_cost = {depot: data_Handling_Cost.at[depot, 'Handling Cost'] for depot in raw_Depots}  # 仓库的装卸费
-zipcode = []
+
+factoryZipCode = {factory: data_zipcode.at[factory, 'Zipcode'] for factory in raw_Factories}
+dcZipCode = {depot: data_zipcode.at[depot, 'Zipcode'] for depot in raw_Depots}
+customerZipCode = {customer: data_zipcode.at[customer, 'Zipcode'] for customer in raw_Customers}
+
 demand = {customer: data_Customer_Information.at[customer, 'Demand'] for customer in raw_Customers}  # 顾客的需求量
 order_num = {customer: data_Customer_Information.at[customer, 'Order'] for customer in raw_Customers}  # 顾客的订单量
 distance = {(source,destination):data_Distance_matrix.at[source,destination] for source in raw_Cities for destination in raw_Cities if str(data_Distance_matrix.at[source,destination]) != 'nan'}
 time = {(source,destination):data_Time_matrix.at[source,destination] for source in raw_Cities for destination in raw_Cities if str(data_Time_matrix.at[source,destination]) != 'nan'}
+apikey = '05d2f10de78e400e90d1ddf1ee2fa91f'
 
-a = Network(factoryToCustomer, factoryToDc, dcToCustomer,factoryToCustomerMin, dcToCustomerMin, handling_cost, zipcode, demand, order_num, distance, time)
+a = Network(factoryToCustomer, factoryToDc, dcToCustomer,factoryToCustomerMin, dcToCustomerMin, handling_cost, demand, factoryZipCode, dcZipCode, customerZipCode, order_num, apikey)
 a.add_model()
 a.solve_model('gurobi')
