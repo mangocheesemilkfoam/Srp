@@ -11,7 +11,7 @@ import pyomo.environ as pyo
 class Network(object):
 
     def __init__(self, factoryToCustomer, factoryToDc, dcToCustomer, factoryToCustomerMin, dcToCustomerMin,
-                 handling_cost, demand, factoryZipCode, dcZipCode, customerZipCode, order_num, apikey):
+                 handling_cost, demand, factoryZipCode, dcZipCode, customerZipCode, order_num, transportMode, apikey):
 
         '''
         初始化相关参数
@@ -50,10 +50,17 @@ class Network(object):
         self.__customerList = list(self.__demand.keys())
         self.__cityList = self.__factoryList + self.__dcList + self.__customerList
 
-        self.__distance = self.get_transport_info(apikey)[0]
-        self.__time = self.get_transport_info(apikey)[1]
+        self.__distance = self.get_transport_info(transportMode, apikey)[0]
+        self.__time = self.get_transport_info(transportMode, apikey)[1]
 
     def get_coordinate(self, city, zipCode, apikey):
+
+        '''
+        :param city: 城市名
+        :param zipCode: 城市的邮编
+        :param apikey: 你的apikey
+        :return: 该城市的经纬度
+        '''
         base_url = 'https://api.geoapify.com/v1/geocode/search'  # 官方给出的API查询接口
 
         request_parameters = {
@@ -66,7 +73,13 @@ class Network(object):
         res = requests.get(base_url, params=request_parameters)
         return [res.json()['results'][0]['lon'], res.json()['results'][0]['lat']]
 
-    def get_transport_info(self, apikey):
+    def get_transport_info(self, transportMode, apikey):
+
+        '''
+        :param transportMode: 运输工具（卡车，铁路等）
+        :param apikey: 你的apikey
+        :return: 返回距离和时间
+        '''
         distance = {}
         time = {}
         source = {}
@@ -75,19 +88,12 @@ class Network(object):
             source['location'] = self.get_coordinate(city, self.__cityZipCode[city], apikey)
             sourceList.append(source)
 
-
         baseUrl = "https://api.geoapify.com/v1/routematrix?apiKey=" + apikey
-        # data = {
-        #     "mode": "truck",
-        #     "sources": sourceList,
-        #     "targets": sourceList
-        # }
-        # res = requests.post(url=baseUrl, json=data)
 
         for i in range(len(self.__cityList) - 1):
             start = self.__cityList[i]
             data = {
-                "mode": "truck",
+                "mode": transportMode,
                 "sources": [sourceList[i]],
                 "targets": sourceList
             }
@@ -177,19 +183,14 @@ class Network(object):
         return model
 
     def solve_model(self, solverName):
-        # Solve Model
         opt = pyo.SolverFactory(solverName, solver_io="python")
         self.__model = self.add_model()
-        opt.solve(self.__model)
+        self.__solution = opt.solve(self.__model)
 
-        self.__model.display()
-        self.__model.pprint()
 
     def export_data(self):
-        '''
-        导出特定格式的求解结果
-        '''
-        pass
+        self.__model.display()
+        self.__model.pprint()
 
 # 测试代码
 test_data_path = './test/data/data.xlsx'
@@ -230,8 +231,10 @@ demand = {customer: data_Customer_Information.at[customer, 'Demand'] for custome
 order_num = {customer: data_Customer_Information.at[customer, 'Order'] for customer in raw_Customers}  # 顾客的订单量
 distance = {(source,destination):data_Distance_matrix.at[source,destination] for source in raw_Cities for destination in raw_Cities if str(data_Distance_matrix.at[source,destination]) != 'nan'}
 time = {(source,destination):data_Time_matrix.at[source,destination] for source in raw_Cities for destination in raw_Cities if str(data_Time_matrix.at[source,destination]) != 'nan'}
+transportMode = 'truck'
 apikey = '05d2f10de78e400e90d1ddf1ee2fa91f'
 
-a = Network(factoryToCustomer, factoryToDc, dcToCustomer,factoryToCustomerMin, dcToCustomerMin, handling_cost, demand, factoryZipCode, dcZipCode, customerZipCode, order_num, apikey)
+a = Network(factoryToCustomer, factoryToDc, dcToCustomer,factoryToCustomerMin, dcToCustomerMin, handling_cost, demand, factoryZipCode, dcZipCode, customerZipCode, order_num, transportMode, apikey)
 a.add_model()
 a.solve_model('gurobi')
+a.export_data()
